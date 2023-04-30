@@ -1,4 +1,6 @@
 <script>
+    // full explainatin of how this component works with InfiniteScrolling in documentation.md
+    
     import { createEventDispatcher, onMount } from "svelte";
 
     export let enablePagination;
@@ -26,13 +28,6 @@
         }  
     }
 
-    // ok this is gonna be a banger, here is what is happening:
-    // reachedFinalPage and enablePagination both start off as false. 
-    // enablePagination is enabled when a movie is successfully called, and thus the scrolling begins. 
-    // we have a total of x pages, when we reach the final page, we say we set reachedFinalPage to true in the loadmore function
-    // when we change reachedFinalPage, we set enablePagination to false and hide the loader
-    // what that does is the next time the user scrolls to the bottom, we dont call API anymore 
-    // we can just disable pagination by setting enablePagination to false without needing reachedFinalPage but we wouldn't be able to hide loader
 
     reachedFinalPage.subscribe((value) =>{
         if (value === true){

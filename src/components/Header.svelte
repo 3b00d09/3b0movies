@@ -58,9 +58,6 @@
     header{
         color:white;
         background-color: #1C1C1C;
-
-        /* background-color: #2D282F; */
-        
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -68,11 +65,6 @@
         gap: 1rem;
         padding: 1rem;
         width: 100%;
-        
-        /* position: fixed;
-        top: 0;
-        left: 0;
-        right: 0; */
     }
 
     .navbar{
