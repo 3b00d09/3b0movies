@@ -65,11 +65,13 @@
     })
 
     async function navigateIndex(pageIndex){
+        console.log(pageIndex)
+        console.log(movies.length)
 
-        // page index is the page number we are on and initial length is how many pages we started with 
-        // this basically says if we start by splitting a single api page into 4 pages, then thats our initial length
-        // and every time our pageindex + initial length is equal to our current length of pages, we call api. we call the api before we actually need to for better performance
-        if ((pageIndex + moviesPerSlide - 1) === movies.length){
+        // we call the api before we actually need to so when the user reaches there the data is already loaded
+        // we determine this by taking the length of our movies and calling the api when we are half-way there
+        if ((pageIndex) === Math.floor(movies.length / 2)){
+            console.log("here")
             loadNextPage()
         }
         currMovies = movies[pageIndex - 1]

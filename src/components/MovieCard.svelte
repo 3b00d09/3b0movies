@@ -72,7 +72,7 @@
     }
 
     .poster, .title{
-        width: 255px;
+        width: 150px;
         height: auto;
     }
 
