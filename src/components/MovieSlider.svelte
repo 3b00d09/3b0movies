@@ -65,13 +65,10 @@
     })
 
     async function navigateIndex(pageIndex){
-        console.log(pageIndex)
-        console.log(movies.length)
 
         // we call the api before we actually need to so when the user reaches there the data is already loaded
         // we determine this by taking the length of our movies and calling the api when we are half-way there
         if ((pageIndex) === Math.floor(movies.length / 2)){
-            console.log("here")
             loadNextPage()
         }
         currMovies = movies[pageIndex - 1]
